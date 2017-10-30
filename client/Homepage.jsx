@@ -6,7 +6,7 @@ import SubNav from './SubNav';
 import Block from './Block';
 import Footer from './Footer';
 
-import './style.scss';
+import './styles/style.scss';
 
 const Homepage = () => {
 	return (
