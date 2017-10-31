@@ -17,6 +17,7 @@
     "bootstrap-sass": "^3.3.7",
     "express": "^4.15.3",
     "morgan": "^1.8.2",
+    "normalize-scss": "^7.0.0",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.2",

@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const links = ['How It Works', 'Browse Projects', '', 'I\'m A Freelancer', 'Log In/Sign Up']
+const links = ['Overview', 'Design', 'Development', 'Planning', 'Production']
 
 const SubNav = () => {
 	return (
-		<ul>
-		{links.map((link, i) => (
-			<li key={i}><Link to="#">{link}</Link></li>
-			)
-		)}
-		</ul>
+		<nav>
+			<ul className="subnav">
+			{links.map((link, i) => (
+				<li key={i}><Link to="#">{link}</Link></li>
+				)
+			)}
+			</ul>
+		</nav>
 	)
 };
 
