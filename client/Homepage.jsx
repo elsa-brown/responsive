@@ -14,17 +14,15 @@ import './styles/style.scss';
 
 const Homepage = () => {
 	return (
-		<div>
-			<div className="wrapper">
-				<NavBar />
-				<Hero />
-				<SubNav />
-				<BlockFirst />
-				<BlockSecond />
-				<BlockThird />
-				<BlockFourth />
-				<BlockFifth />
-			</div>
+		<div className="wrapper">
+			<NavBar />
+			<Hero />
+			<SubNav />
+			<BlockFirst />
+			<BlockSecond />
+			<BlockThird />
+			<BlockFourth />
+			<BlockFifth />
 			<Footer />
 		</div>
 	)

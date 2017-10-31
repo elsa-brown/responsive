@@ -80,10 +80,9 @@ a:hover {
 	height: 50px;
 	width: 100%;
 	display: flex;
-	font-size: 0.75rem;
 	justify-content: space-between;
+	font-size: 0.75rem;
 	align-items: center;
-	z-index: 3;
 }
 
 .nav-link {
@@ -207,12 +206,15 @@ a:hover {
 		align-items: center;
 		width: 50%;
 		float: left;
+		filter: none;
+		-webkit-transition: filter 0.2s ease-out;
+		transition: filter 0.2s ease-out;
 		&:hover {
-			opacity: 0.8;
+			filter: brightness(200%);
 			td {
-				opacity:0;
+				opacity: 0;
 			}
-		};
+		}
 	}
 }
 
@@ -296,4 +298,49 @@ a:hover {
 	img {
 		width: 450px;
 	}
+}
+
+.block-third {
+	background-image: url('../../public/assets/Map_Camera.png');
+}
+
+.block-fourth {
+	background-color: white;
+}
+
+.block-fifth {
+	background-color: $nearBlack;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+	padding-bottom: 50px;
+	font-size: 0.7rem;
+	line-height: 1.2rem;
+}
+
+.footer-title {
+	font-weight: bold;
+}
+
+.social {
+	text-align: center;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.tiny {
+	margin-top: 0;
+	font-size: 0.5rem;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+.fa {
+	font-size: 1.5rem;
 }

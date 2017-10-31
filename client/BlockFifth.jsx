@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlockFifth = () => {
 	return (
-		<div>BlockFifth</div>
+		<div className="block-narrow block-fifth"></div>
 )};
 
 export default BlockFifth;

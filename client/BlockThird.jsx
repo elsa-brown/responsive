@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlockThird = () => {
 	return (
-		<div>BlockThird</div>
+		<div className="block-narrow block-third"></div>
 )};
 
 export default BlockThird;
