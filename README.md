@@ -1,4 +1,4 @@
-## Wethos: Front End Excercise 11/1/17
+## Wethos: Front End Excercise
 Thank you for taking the time to review this submission.
 
 ## Instructions
