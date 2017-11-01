@@ -30,10 +30,10 @@ const Footer = () => {
 			<div className="col-md-3 social">
 				<p className="tiny">Whatever You Do. Don't Follow Us</p>
 				<div className="social-icons">
-					<i className="fa fa-facebook-official" aria-hidden="true"></i>
-					<i className="fa fa-linkedin-square" aria-hidden="true"></i>
-					<i className="fa fa-twitter-square" aria-hidden="true"></i>
-					<i className="fa fa-instagram" aria-hidden="true"></i>
+					<Link to="#"><i className="fa fa-facebook-official" aria-hidden="true"></i></Link>
+					<Link to="#"><i className="fa fa-linkedin-square" aria-hidden="true"></i></Link>
+					<Link to="#"><i className="fa fa-twitter-square" aria-hidden="true"></i></Link>
+					<Link to="#"><i className="fa fa-instagram" aria-hidden="true"></i></Link>
 				</div>
 			</div>
 		</div>

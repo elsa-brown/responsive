@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MobileNav from './MobileNav';
+import MobileNavContainer from './MobileNavContainer';
 import NavBar from './NavBar';
 import Hero from './Hero';
 import SubNav from './SubNav';
@@ -17,7 +17,7 @@ import '../styles/style.scss';
 const Homepage = () => {
 	return (
 		<div className="wrapper">
-			<MobileNav />
+			<MobileNavContainer />
 			<NavBar />
 			<Hero />
 			<MobileSubNav />

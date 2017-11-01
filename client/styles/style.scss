@@ -88,7 +88,7 @@ a:hover {
 .mobile-nav {
 	background-color: $nearBlack;
 	position: fixed;
-	height: 60px;
+	/*height: 60px;*/
 	width: 100%;
 	fa {
 		float: right;
@@ -100,6 +100,24 @@ a:hover {
 		visibility: hidden;
 		height: 0;
 	}
+}
+
+.toggle-enter {
+	height: 0;
+}
+
+.toggle-enter.toggle-enter-active {
+	height: 400px;
+	transition: 0.3s ease-in;
+}
+
+.toggle-leave {
+	height: 400px;
+}
+
+.toggle-leave.toggle-leave-active {
+	height: 0;
+	transition: 0.3s ease-in;
 }
 
 .logobox {
@@ -118,6 +136,11 @@ a:hover {
 	color: white;
 	margin-top: -52px;
 	padding-right: 15px;
+
+	&:hover {
+		cursor: pointer;
+	}
+
 	i {
 		font-size: 2rem;
 		font-weight: lighter;
