@@ -2,9 +2,9 @@
 @import "breakpoints";
 @import "columns";
 @import "fonts";
+@import "colors";
 
-$purple: #9966FF;
-$nearBlack: #181818;
+/* global styles */
 
 body {
 	background-color: $purple;
@@ -30,6 +30,7 @@ h1 {
 	font-size: 5rem;
 	text-transform: uppercase;
 	font-family: $font-stack-oswald;
+
 	@media screen and (min-width: $sm) {
 		font-size: 6rem;
 	}
@@ -41,6 +42,7 @@ h3 {
 	font-size: 2.5rem;
 	text-transform: uppercase;
 	font-family: $font-stack-oswald;
+
 	@media screen and (min-width: $xxs) {
 		font-size: 3.25rem;
 	}
@@ -53,6 +55,7 @@ h4 {
 	font-size: 0.9rem;
 	line-height: 1.4rem;
 	padding-bottom: 20px;
+
 	@media screen and (min-width: $xxs) {
 		font-size: 1rem;
 	}
@@ -62,6 +65,7 @@ h6 {
 	font-weight: lighter;
 	font-size: 0.8rem;
 	line-height: 1.25rem;
+
 	@media screen and (min-width: $xxs) {
 		font-size: 0.9rem;
 	}
@@ -85,180 +89,27 @@ a:hover {
 	margin: 0 auto;
 }
 
-.mobile-nav {
-	background-color: $nearBlack;
-	position: fixed;
-	/*height: 60px;*/
-	width: 100%;
-	fa {
-		float: right;
-	}
-	fa:before {
-		visibility: hidden;
-	}
+.block-narrow {
+	height: 800px;
+
 	@media screen and (min-width: $sm) {
-		visibility: hidden;
-		height: 0;
+		height: 500px;
 	}
 }
 
-.toggle-enter {
-	height: 0;
-}
-
-.toggle-enter.toggle-enter-active {
-	height: 400px;
-	transition: 0.3s ease-in;
-}
-
-.toggle-leave {
-	height: 400px;
-}
-
-.toggle-leave.toggle-leave-active {
-	height: 0;
-	transition: 0.3s ease-in;
-}
-
-.logobox {
-	margin-top: -5px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	img {
-		height: 65px;
-	}
-}
-
-.menubox {
-	margin-top: -5px;
-	float: right;
-	color: white;
-	margin-top: -52px;
-	padding-right: 15px;
-
-	&:hover {
-		cursor: pointer;
-	}
-
-	i {
-		font-size: 2rem;
-		font-weight: lighter;
-	}
-}
-
-.navbar {
-	visibility: hidden;
-	height: 0;
-	@media screen and (min-width: $sm) {
-		visibility: visible;
-		height: 50px;
-		width: 100%;
-		max-width: $xl;
-		position: fixed;
-		background-color: $nearBlack;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		font-size: 0.9rem;
-		align-items: center;
-	}
-}
-
-.nav-link {
-	&:hover {
-		background-color: $purple;
-	}
-}
-
-.nav-logo {
-	text-align: center;
-	&:hover {
-		background-color: none;
-	}
-	img {
-		width: 150px;
-		margin-top: 4px;
-		&:hover {
-			filter: brightness(125%);
-		}
-	}
-}
-
-.nav-link {
-	height: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-.subnav {
-	visibility: hidden;
-	height: 0;
-	background-color: $nearBlack;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 0.9rem;
-	border-top: 0.5px solid white;
-	border-bottom: 0.5px solid white;
-
-	@media screen and (min-width: $xxs) {
-		visibility: visible;
-		height: 50px;
-	}
-
-	li {
-		padding-left: 20px;
-		padding-right: 20px;
-
-		&:hover {
-			font-weight: bold;
-			a {
-				color: $purple;
-			}
-		}
-	}
-}
-
-.subnav-mobile {
-	visibility: visible;
-	height: 50px;
-	@media screen and (min-width: $xxs) {
-			visibility: hidden;
-			height: 0;
-	}
-	
-	.fa {
-		font-size: 0.8rem;
-	}
-}
-
-.hero {
-	background-image: url('../../public/assets/Books.png');
-	height: 500px;
-	background-size: cover;
-	padding: 20px;
-	padding-top: 100px;
+.block-wide {
+	height: 990px;
 
 	@media screen and (min-width: $xs) {
-		height: 400px;
-		padding: 100px;
-		padding-top: 140px;
+		height: 1050px;
 	}
 
-	h4 {
-		margin-top: 30px;
-		margin-bottom: 20px;
+	@media screen and (min-width: $sm) {
+		height: 725px;
 	}
 }
 
-.hero-text-adjust {
-	letter-spacing: -0.7rem;
-}
+/* button styles */
 
 .button {
 	padding-top: 10px;
@@ -285,14 +136,178 @@ a:hover {
 	color: black;
 }
 
+/* MobileNav styles */
 
-.block-narrow {
-	height: 800px;
+.mobile-nav {
+	background-color: $nearBlack;
+	position: fixed;
+	width: 100%;
+
+	fa {
+		float: right;
+	}
+
+	fa:before {
+		visibility: hidden;
+	}
+
 	@media screen and (min-width: $sm) {
-		height: 500px;
+		visibility: hidden;
+		height: 0;
 	}
 }
 
+.logobox {
+	margin-top: -5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	img {
+		height: 65px;
+	}
+}
+
+.menubox {
+	margin-top: -5px;
+	float: right;
+	color: white;
+	margin-top: -52px;
+	padding-right: 15px;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	i {
+		font-size: 2rem;
+		font-weight: lighter;
+	}
+}
+
+/* NavBar styles */
+
+.navbar {
+	visibility: hidden;
+	height: 0;
+
+	@media screen and (min-width: $sm) {
+		visibility: visible;
+		height: 50px;
+		width: 100%;
+		max-width: $xl;
+		position: fixed;
+		background-color: $nearBlack;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.9rem;
+		align-items: center;
+	}
+}
+
+.nav-link {
+	&:hover {
+		background-color: $purple;
+	}
+}
+
+.nav-logo {
+	text-align: center;
+
+	&:hover {
+		background-color: none;
+	}
+
+	img {
+		width: 150px;
+		margin-top: 4px;
+		&:hover {
+			filter: brightness(125%);
+		}
+	}
+}
+
+.nav-link {
+	height: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* SubNav styles */
+.subnav {
+	visibility: hidden;
+	height: 0;
+	background-color: $nearBlack;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.9rem;
+	border-top: 0.5px solid white;
+	border-bottom: 0.5px solid white;
+
+	@media screen and (min-width: $xxs) {
+		visibility: visible;
+		height: 50px;
+	}
+
+	li {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&:hover {
+			font-weight: bold;
+
+			a {
+				color: $purple;
+			}
+		}
+	}
+}
+
+.subnav-mobile {
+	visibility: visible;
+	height: 50px;
+
+	@media screen and (min-width: $xxs) {
+			visibility: hidden;
+			height: 0;
+	}
+	
+	.fa {
+		font-size: 0.8rem;
+	}
+}
+
+/* Hero styles */
+.hero {
+	background-image: url('../../public/assets/Books.png');
+	height: 500px;
+	background-size: cover;
+	padding: 20px;
+	padding-top: 100px;
+
+	@media screen and (min-width: $xs) {
+		height: 400px;
+		padding: 100px;
+		padding-top: 140px;
+	}
+
+	h4 {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+}
+
+.hero-text-adjust {
+	letter-spacing: -0.7rem;
+}
+
+/* BlockFirst styles */
 .block-first {
 	background-color: $nearBlack;
 	display: flex;
@@ -304,6 +319,7 @@ a:hover {
 	display: flex;
 	align-items: center;
 	height: 400px;
+
 	@media screen and (min-width: $sm) {
 		height: 500px;
 	}
@@ -314,6 +330,7 @@ a:hover {
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 10px;
+
 	h6 {
 		margin-right: 50px;
 	}
@@ -329,6 +346,7 @@ a:hover {
 		display: flex;
 		width: 100%;
 		height: 200px;
+
 		@media screen and (min-width: $sm) {
 			height: 250px;
 		}
@@ -348,12 +366,14 @@ a:hover {
 		text-transform: uppercase;
 		-webkit-transition: filter 0.2s ease-out;
 		transition: filter 0.2s ease-out;
+
 		&:hover {
 			filter: brightness(200%);
 			td {
 				opacity: 0;
 			}
 		}
+
 		@media screen and (min-width: $lg) {
 			font-size: 1.25rem;
 		}
@@ -378,19 +398,14 @@ a:hover {
 	background-position: right center;
 }
 
-.block-wide {
-	height: 1000px;
-	@media screen and (min-width: $sm) {
-		height: 725px;
-	}
-}
-
+/* BlockSecond styles */
 .block-second {
 	background-color: white;
 	color: $nearBlack;
 	display: flex;
 	flex-direction: column;
 	padding: 30px;
+
 	a {
 		color: $nearBlack;
 	}
@@ -406,6 +421,7 @@ a:hover {
 
 .block-second-top-text {
 	margin-top: -40px;
+
 	h6 {
 		margin-bottom: 40px;
 	}
@@ -437,6 +453,7 @@ a:hover {
 		text-transform: uppercase;
 		font-family: $font-stack-oswald;
 		margin-bottom: 10px;
+
 		&:hover {
 			color: $purple;
 		}
@@ -484,18 +501,22 @@ a:hover {
 	}
 }
 
+/* BlockThird styles */
 .block-third {
 	background-image: url('../../public/assets/Map_Camera.png');
 }
 
+/* BlockFourth styles */
 .block-fourth {
 	background-color: white;
 }
 
+/* BlockFifth styles */
 .block-fifth {
 	background-color: $nearBlack;
 }
 
+/* Footer styles */
 .footer {
 	display: flex;
 	flex-direction: column;
