@@ -9,7 +9,7 @@ Thank you for taking the time to review this submission.
 
 ## TODO
 
-### React Components
+#### * React Components
  * Complete BlockThird, BlockFourth, and BlockFifth and make responsive following the responsive styling of the above blocks (i.e. stack components vertically as appropriate)
 
 ### MobileNav
