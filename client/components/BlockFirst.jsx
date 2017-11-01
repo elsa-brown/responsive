@@ -5,7 +5,7 @@ const BlockFirst = () => {
 	return (
 		<div className="block-narrow block-first">
 			<div className="block-first-left col-mobile-12 col-sm-6">
-				<div className="block-first-left-text col-md-10">
+				<div className="block-first-left-text col-lg-10">
 					<h3>We Match Freelancers</h3> 
 					<h3>With Cause + Skills</h3>
 					<h6>These aren't just your average graphic designers, these are people who's heart and soul aligns with making the world a better place. We match you based on cause and skills, so you can find the passionate professionals you need to keep making a difference.

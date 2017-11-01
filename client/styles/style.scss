@@ -9,8 +9,7 @@ $nearBlack: #181818;
 body {
 	background-color: $purple;
 	color: white;
-	font-family: sans-serif;
-	font-weight: lighter;
+	font-family: Helvetica, sans-serif;
 }
 
 header {
@@ -30,7 +29,10 @@ h1 {
 	margin-bottom: 0;
 	font-size: 5rem;
 	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+	font-family: $font-stack-oswald;
+	@media screen and (min-width: $sm) {
+		font-size: 6rem;
+	}
 }
 
 h3 {
@@ -38,22 +40,31 @@ h3 {
 	margin-bottom: 0;
 	font-size: 2.5rem;
 	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+	font-family: $font-stack-oswald;
+	@media screen and (min-width: $xxs) {
+		font-size: 3.25rem;
+	}
 }
 
 h4 {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: lighter;
-	font-size: 0.85rem;
-	line-height: 1.2rem;
+	font-size: 0.9rem;
+	line-height: 1.4rem;
 	padding-bottom: 20px;
+	@media screen and (min-width: $xxs) {
+		font-size: 1rem;
+	}
 }
 
 h6 {
 	font-weight: lighter;
-	font-size: 0.7rem;
-	line-height: 1.05rem;
+	font-size: 0.8rem;
+	line-height: 1.25rem;
+	@media screen and (min-width: $xxs) {
+		font-size: 0.9rem;
+	}
 }
 
 a {
@@ -126,7 +137,7 @@ a:hover {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		font-size: 0.75rem;
+		font-size: 0.9rem;
 		align-items: center;
 	}
 }
@@ -161,8 +172,6 @@ a:hover {
 	text-align: center;
 }
 
-
-
 .subnav {
 	visibility: hidden;
 	height: 0;
@@ -170,7 +179,7 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 0.75rem;
+	font-size: 0.9rem;
 	border-top: 0.5px solid white;
 	border-bottom: 0.5px solid white;
 
@@ -216,12 +225,16 @@ a:hover {
 		height: 400px;
 		padding: 100px;
 		padding-top: 140px;
-	}	
+	}
 
 	h4 {
 		margin-top: 30px;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
+}
+
+.hero-text-adjust {
+	letter-spacing: -0.7rem;
 }
 
 .button {
@@ -230,11 +243,14 @@ a:hover {
 	padding-left: 50px;
 	padding-right: 50px;
 	border-radius: 5px;
-	font-size: 0.6rem;
+	font-size: 0.8rem;
+	font-weight: lighter;
 }
 
 .button:hover {
-	opacity: 0.5;
+	background-color: $purple;
+	border: none;
+	color: white;
 }
 
 .button-light {
@@ -302,8 +318,10 @@ a:hover {
 		width: 50%;
 		float: left;
 		filter: none;
-		font-family: $font-stack-playfair-bold;
+		font-family: $font-stack-playfair;
 		font-style: italic;
+		font-size: 1.25rem;
+		letter-spacing: 0.3rem;
 		text-transform: uppercase;
 		-webkit-transition: filter 0.2s ease-out;
 		transition: filter 0.2s ease-out;
@@ -312,6 +330,9 @@ a:hover {
 			td {
 				opacity: 0;
 			}
+		}
+		@media screen and (min-width: $lg) {
+			font-size: 1.25rem;
 		}
 	}
 }
@@ -335,14 +356,16 @@ a:hover {
 }
 
 .block-wide {
-	height: 725px;
+	height: 1000px;
+	@media screen and (min-width: $sm) {
+		height: 725px;
+	}
 }
 
 .block-second {
 	background-color: white;
 	color: $nearBlack;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	padding: 30px;
 	a {
@@ -366,36 +389,75 @@ a:hover {
 }
 
 .block-second-bottom {
-	display: flex;
-	align-items: flex-start;
+	display: inline-block;
 	height: 325px;
-	padding-left: 50px;
-	padding-right: 50px;
+
+	@media screen and (min-width: $sm) {
+		display: flex;
+	}
+
+	@media screen and (min-width: $lg) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
 
 .block-second-bottom-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: left;
-	padding-right: 50px;
+	padding-top: 30px;
+
 	li {
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 		text-transform: uppercase;
-		font-family: 'Oswald', sans-serif;
+		font-family: $font-stack-oswald;
 		margin-bottom: 10px;
 		&:hover {
 			color: $purple;
 		}
 	}
+
 	h6 {
 		margin-top: 0;
+	}
+
+	@media screen and (min-width: $sm) {
+		padding-top: 0;
+	}
+}
+
+.block-second-mobile-image {
+	text-align: center;
+	padding-top: 20px;
+
+	img {
+		width: 80%;
+	}
+
+	@media screen and (min-width: $sm) {
+		visibility: hidden;
+		width: 0;
+		height: 0;
 	}
 }
 
 .block-second-bottom-right {
+	visibility: hidden;
+	height: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	img {
+		width: 80%;
 		max-width: 450px;
+	}
+
+	@media screen and (min-width: $sm) {
+		visibility: visible;
+		height: 325px;
 	}
 }
 
@@ -445,7 +507,6 @@ a:hover {
 	padding-left: 80px;
 	padding-right: 80px;
 	
-
 	@media screen and (min-width: $xs) {
 		padding-left: 120px;
 		padding-right: 120px;
@@ -460,7 +521,7 @@ a:hover {
 	margin-top: 0;
 	font-size: 0.5rem;
 	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+	font-family: $font-stack-oswald;
 }
 
 .fa {

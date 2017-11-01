@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import laptop from '../../public/assets/laptop.png';
+import laptop from '../../public/assets/Macbook.svg';
 
 const BlockSecond = () => {
 	return (
 		<div className="block-second block-wide">
 			<div className="block-second-top">
-				<div className="block-second-top-text col-xs-5">
+				<div className="block-second-top-text col-md-6">
 					<h3>Free to Sign Up</h3> 
 					<h3>Free To Post Projects</h3>
 					<h6>We don't have any upfront or monthly fees, all you have to worry about is paying your freelancer. Speaking of which, how much do you even pay a freelancer anyway? Our unique pricing suggestion engine helps you set fair rates you can afford.</h6>
@@ -15,7 +15,10 @@ const BlockSecond = () => {
 				</div>
 			</div>
 			<div className="block-second-bottom">
-				<div className="block-second-bottom-left col-md-6">
+				<div className="block-second-mobile-image col-mobile-12">
+					<img src={laptop} />
+				</div>
+				<div className="block-second-bottom-left col-mobile-12 col-md-6">
 					<ol>
 						<Link to="#"><li>Sign Up</li></Link>
 						<h6>Create a profile that highlights your organization's mission.</h6>
@@ -26,7 +29,7 @@ const BlockSecond = () => {
 
 					</ol>
 				</div>
-				<div className="block-second-bottom-right col-md-6">
+				<div className="block-second-bottom-right col-mobile-12 col-md-6">
 					<img src={laptop} />
 				</div>
 			</div>
