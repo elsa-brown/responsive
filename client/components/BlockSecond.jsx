@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import laptop from '../public/assets/laptop.png';
+import laptop from '../../public/assets/laptop.png';
 
 const BlockSecond = () => {
 	return (
 		<div className="block-second block-wide">
 			<div className="block-second-top">
-				<div className="block-second-top-text col-md-5">
+				<div className="block-second-top-text col-xs-5">
 					<h3>Free to Sign Up</h3> 
 					<h3>Free To Post Projects</h3>
 					<h6>We don't have any upfront or monthly fees, all you have to worry about is paying your freelancer. Speaking of which, how much do you even pay a freelancer anyway? Our unique pricing suggestion engine helps you set fair rates you can afford.</h6>

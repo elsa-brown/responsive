@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Homepage from './Homepage';
-
-// import './style.scss';
+import Homepage from './components/Homepage';
 
 ReactDOM.render(
 	<Homepage />,

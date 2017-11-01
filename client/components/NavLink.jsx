@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from '../public/assets/Wethos_TextWhite.png';
-// import logo from '../public/assets/logo-cropped.png';
+import logo from '../../public/assets/Wethos_TextWhite.png';
 
 const NavLink = (props) => {
 	return (

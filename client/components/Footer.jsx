@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-// const links = ['How It Works', 'Browse Projects', '', 'I\'m A Freelancer', 'Log In/Sign Up']
-
 const Footer = () => {
 	return (
 		<div className="footer">
