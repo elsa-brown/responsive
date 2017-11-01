@@ -2,12 +2,12 @@
 Thank you for taking the time to review this submission.
 
 ## Instructions
-1. Install dependencies `npm install`
-2. Run `npm run build-watch` to compile
+1. Install dependencies: `npm install`
+2. Run `npm run build` to compile
 3. Run `npm start` to start server
-4. Open `http://localhost:8080`
+4. Open `http://localhost:8080` to view
 
-### TODO
+## TODO
 
 ### React Components
  * Complete BlockThird, BlockFourth, and BlockFifth and make responsive following the responsive styling of the above blocks (i.e. stack components vertically as appropriate)
