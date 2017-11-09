@@ -1,10 +1,10 @@
 {
-  "name": "wethos-takehome",
+  "name": "responsive",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm start ./server/index.js",
+    "start": "node ./server/index.js",
     "build": "webpack --config webpack.config.js",
     "build-watch": "npm run build -- -w"
   },
