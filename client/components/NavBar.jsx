@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import NavLink from './NavLink';
-const links = ['How It Works', 'Browse Projects', '', 'I\'m A Freelancer', 'Log In/Sign Up']
+const links = ['Link', 'Link', 'Link', 'Link', 'Link']
 
 const NavBar = () => {
 	return (

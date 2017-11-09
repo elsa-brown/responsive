@@ -8,13 +8,19 @@
 
 body {
 	background-color: $purple;
-	color: white;
-	font-family: Helvetica, sans-serif;
+	color: $yellow;
+	font-family: 'PT Mono', sans-serif;
+	box-sizing: border-box;
 }
 
 header {
 	position: fixed;
 	margin: 0;
+}
+
+a {
+	color: $yellow;
+	text-decoration: none;
 }
 
 ul {
@@ -27,19 +33,19 @@ ul {
 h1 {
 	margin-top: 0;
 	margin-bottom: 0;
-	font-size: 5rem;
+	font-size: 3.6rem;
 	text-transform: uppercase;
 	font-family: $font-stack-oswald;
 
-	@media screen and (min-width: $sm) {
+	@media screen and (min-width: $xs) {
 		font-size: 6rem;
 	}
 }
 
 h3 {
 	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	font-size: 3rem;
 	text-transform: uppercase;
 	font-family: $font-stack-oswald;
 
@@ -61,14 +67,11 @@ h4 {
 	}
 }
 
-h6 {
+h5 {
+	font-size: 0.85rem;
 	font-weight: lighter;
-	font-size: 0.8rem;
 	line-height: 1.25rem;
-
-	@media screen and (min-width: $xxs) {
-		font-size: 0.9rem;
-	}
+	hyphens: auto;
 }
 
 a {
@@ -85,28 +88,8 @@ a:hover {
 }
 
 .wrapper {
-	max-width: $xl;
+	max-width: 950px;
 	margin: 0 auto;
-}
-
-.block-narrow {
-	height: 800px;
-
-	@media screen and (min-width: $sm) {
-		height: 500px;
-	}
-}
-
-.block-wide {
-	height: 990px;
-
-	@media screen and (min-width: $xs) {
-		height: 1050px;
-	}
-
-	@media screen and (min-width: $sm) {
-		height: 725px;
-	}
 }
 
 /* button styles */
@@ -119,16 +102,16 @@ a:hover {
 	border-radius: 5px;
 	font-size: 0.8rem;
 	font-weight: lighter;
+	color: $yellow;
 }
 
 .button:hover {
 	background-color: $purple;
 	border: none;
-	color: white;
 }
 
 .button-light {
-	border: 1px solid white;
+	border: 1px solid $yellow;
 }
 
 .button-dark {
@@ -139,17 +122,21 @@ a:hover {
 /* MobileNav styles */
 
 .mobile-nav {
-	background-color: $nearBlack;
+	background-color: $pink;
+	color: $yellow;
 	position: fixed;
 	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
 
-	fa {
+/*	fa {
 		float: right;
 	}
 
 	fa:before {
 		visibility: hidden;
-	}
+	}*/
 
 	@media screen and (min-width: $sm) {
 		visibility: hidden;
@@ -157,23 +144,19 @@ a:hover {
 	}
 }
 
-.logobox {
-	margin-top: -5px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-
-	img {
-		height: 65px;
-	}
-}
-
 .menubox {
-	margin-top: -5px;
-	float: right;
-	color: white;
-	margin-top: -52px;
-	padding-right: 15px;
+	color: $yellow;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 12px;
+	z-index: 2;
+
+	.fa {
+		padding-right: 12px;
+	}
 
 	&:hover {
 		cursor: pointer;
@@ -185,20 +168,42 @@ a:hover {
 	}
 }
 
-/* NavBar styles */
+.mobile-dropdown-container {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
 
+.mobile-dropdown {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 50px;
+	background-color: $pink;
+
+	li {
+		padding: 16px;
+
+		&:hover {
+			background-color: $purple;
+		}
+	}
+}
+
+/* NavBar styles */
 .navbar {
 	visibility: hidden;
 	height: 0;
+	color: $yellow;
 
 	@media screen and (min-width: $sm) {
 		visibility: visible;
 		height: 50px;
 		width: 100%;
-		max-width: $xl;
+		max-width: 950px;
 		position: fixed;
-		background-color: $nearBlack;
-		width: 100%;
+		background-color: $pink;
 		display: flex;
 		justify-content: space-between;
 		font-size: 0.9rem;
@@ -236,65 +241,22 @@ a:hover {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-}
-
-/* SubNav styles */
-.subnav {
-	visibility: hidden;
-	height: 0;
-	background-color: $nearBlack;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 0.9rem;
-	border-top: 0.5px solid white;
-	border-bottom: 0.5px solid white;
-
-	@media screen and (min-width: $xxs) {
-		visibility: visible;
-		height: 50px;
-	}
-
-	li {
-		padding-left: 20px;
-		padding-right: 20px;
-
-		&:hover {
-			font-weight: bold;
-
-			a {
-				color: $purple;
-			}
-		}
-	}
-}
-
-.subnav-mobile {
-	visibility: visible;
-	height: 50px;
-
-	@media screen and (min-width: $xxs) {
-			visibility: hidden;
-			height: 0;
-	}
-	
-	.fa {
-		font-size: 0.8rem;
-	}
+	color: $yellow;
 }
 
 /* Hero styles */
 .hero {
-	background-image: url('../../public/assets/Books.png');
-	height: 500px;
-	background-size: cover;
+	background-color: $red;
 	padding: 20px;
-	padding-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid $yellow;
 
 	@media screen and (min-width: $xs) {
-		height: 400px;
-		padding: 100px;
-		padding-top: 140px;
+		height: 380px;
+    padding: 80px;
+    padding-top: 120px;
+    border-bottom: 20px solid $yellow;
 	}
 
 	h4 {
@@ -309,27 +271,24 @@ a:hover {
 
 /* BlockFirst styles */
 .block-first {
-	background-color: $nearBlack;
+	background-color: $gray;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+
+	tbody {
+		width: 100%;
+	}
 }
 
 .block-first-left {
 	display: flex;
 	align-items: center;
-	height: 400px;
-
-	@media screen and (min-width: $sm) {
-		height: 500px;
-	}
 }
 
 .block-first-left-text {
 	margin: 0 auto;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 10px;
+	padding: 70px;
 
 	h6 {
 		margin-right: 50px;
@@ -345,33 +304,25 @@ a:hover {
 	tr {
 		display: flex;
 		width: 100%;
-		height: 200px;
+		height: 150px;
 
 		@media screen and (min-width: $sm) {
-			height: 250px;
+			height: 220px;
 		}
 	}
 
-	a {
+	td {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 50%;
 		float: left;
-		filter: none;
-		font-family: $font-stack-playfair;
-		font-style: italic;
 		font-size: 1.25rem;
 		letter-spacing: 0.3rem;
 		text-transform: uppercase;
-		-webkit-transition: filter 0.2s ease-out;
-		transition: filter 0.2s ease-out;
 
 		&:hover {
-			filter: brightness(200%);
-			td {
-				opacity: 0;
-			}
+			cursor: pointer;
 		}
 
 		@media screen and (min-width: $lg) {
@@ -380,140 +331,105 @@ a:hover {
 	}
 }
 
-.design {
-	background-image: url('../../public/assets/Map_Camera.png');
+.square-a {
+	background-color: $pink;
+	color: $yellow;
+
+	&:hover {
+		background-color: $purple;
+		color: $pink;
+	}
 }
 
-.development {
-	background-image: url('../../public/assets/Books.png');
-}
+.square-b {
+	background-color: $red;
+	color: $yellow;
 
-.planning {
-	background-image: url('../../public/assets/Pencils.png');
-	background-position: center;
-}
-
-.production {
-	background-image: url('../../public/assets/Map_Camera.png');
-	background-position: right center;
+	&:hover {
+		background-color: $purple;
+		color: $red;
+	}
 }
 
 /* BlockSecond styles */
 .block-second {
-	background-color: white;
-	color: $nearBlack;
+	background-color: $yellow;
+	color: $red;
 	display: flex;
 	flex-direction: column;
-	padding: 30px;
+	padding: 80px;
+  text-align: center;
+}
+
+/* Panel styles */
+.panel-container {
+	display: flex;
+	justify-content: flex-start;
+	margin-right: -15px;
+	padding-top: 35px;
+}
+
+.panel-outline {
+	border: 2px solid $red;
+	color: $red;
+	height: 410px;
+ 	margin-right: 15px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.panel {
+	background-color: $red;
+	color: $yellow;
+	height: 340px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  h5 {
+  	margin-top: 0;
+  	margin-bottom: 30px;
+  }
+}
+
+.panel-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.globe {
+	background-image: url('../../public/assets/globe.jpg');
+ 	background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  max-width: 190px;
+  max-height: 190px;
+}
+
+.subfooter {
+	height: 50px;
+	background-color: $gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h4 {
+		padding: 0;
+	}
 
 	a {
-		color: $nearBlack;
-	}
-}
-
-.block-second-top {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	height: 400px;
-}
-
-.block-second-top-text {
-	margin-top: -40px;
-
-	h6 {
-		margin-bottom: 40px;
-	}
-}
-
-.block-second-bottom {
-	display: inline-block;
-	height: 325px;
-
-	@media screen and (min-width: $sm) {
-		display: flex;
-	}
-
-	@media screen and (min-width: $lg) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-}
-
-.block-second-bottom-left {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: left;
-	padding-top: 30px;
-
-	li {
-		font-size: 1.8rem;
-		text-transform: uppercase;
-		font-family: $font-stack-oswald;
-		margin-bottom: 10px;
+		color: $yellow;
 
 		&:hover {
-			color: $purple;
+			text-decoration: underline;
 		}
 	}
-
-	h6 {
-		margin-top: 0;
-	}
-
-	@media screen and (min-width: $sm) {
-		padding-top: 0;
-	}
-}
-
-.block-second-mobile-image {
-	text-align: center;
-	padding-top: 20px;
-
-	img {
-		width: 80%;
-	}
-
-	@media screen and (min-width: $sm) {
-		visibility: hidden;
-		width: 0;
-		height: 0;
-	}
-}
-
-.block-second-bottom-right {
-	visibility: hidden;
-	height: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	img {
-		width: 80%;
-		max-width: 450px;
-	}
-
-	@media screen and (min-width: $sm) {
-		visibility: visible;
-		height: 325px;
-	}
-}
-
-/* BlockThird styles */
-.block-third {
-	background-image: url('../../public/assets/Map_Camera.png');
-}
-
-/* BlockFourth styles */
-.block-fourth {
-	background-color: white;
-}
-
-/* BlockFifth styles */
-.block-fifth {
-	background-color: $nearBlack;
 }
 
 /* Footer styles */
@@ -526,6 +442,14 @@ a:hover {
 	padding-bottom: 30px;
 	font-size: 0.8rem;
 	line-height: 1.2rem;
+
+	a {
+		color: $yellow;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
 	ul {
 		padding-bottom: 20px;
@@ -559,13 +483,6 @@ a:hover {
 	@media screen and (min-width: $sm) {
 		padding: 0;
 	}
-}
-
-.tiny {
-	margin-top: 0;
-	font-size: 0.7rem;
-	text-transform: uppercase;
-	font-family: $font-stack-oswald;
 }
 
 .fa {

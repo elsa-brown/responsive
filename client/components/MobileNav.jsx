@@ -1,17 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router';
 
-import NavLink from './NavLink';
-const links = ['How It Works', 'Browse Projects', 'I\'m A Freelancer', 'Log In/Sign Up']
+import MobileDropdownNav from './MobileDropdownNav';
+const links = ['Link', 'Link', 'Link', 'Link']
 
 const MobileNav = () => {
 	return (
-		<ul className="mobile-nav">
+		<ul className="mobile-dropdown">
 		{links.map((link, i) => (
 			<li key={i}>
-				<Link to="#">
-					<NavLink className="nav-link" linkName={ link } />
-				</Link>
+					<MobileDropdownNav className="nav-link" linkName={ link } />
 			</li>
 			)
 		)}

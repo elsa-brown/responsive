@@ -5,30 +5,29 @@ const Footer = () => {
 	return (
 		<div className="footer">
 			<ul className="col-md-3">
-				<li className="footer-title">Please Help</li>
-				<Link to="#"><li>FAQ Download</li></Link>
-				<Link to="#"><li>Briefing Template</li></Link>
-				<Link to="#"><li>Project Timeline Template</li></Link>
+				<li className="footer-title">Header</li>
+				<Link to="#"><li>Menu Item</li></Link>
+				<Link to="#"><li>Menu Item</li></Link>
+				<Link to="#"><li>Menu Item</li></Link>
 			</ul>
 			<ul className="col-md-3">
-				<li className="footer-title">Things Lawyers Love</li>
-				<Link to="#"><li>Terms & Conditions</li></Link>
-				<Link to="#"><li>Privacy Policy</li></Link>
+				<li className="footer-title">Header</li>
+				<Link to="#"><li>Menu Item</li></Link>
+				<Link to="#"><li>Menu Item</li></Link>
 			</ul>
 			<ul className="col-md-3">
-				<li className="footer-title">Who Are These People</li>
-				<Link to="#"><li>Meet The Team</li></Link>
-				<Link to="#"><li>Blog</li></Link>
+				<li className="footer-title">Header</li>
+				<Link to="#"><li>Menu Item</li></Link>
+				<Link to="#"><li>Menu Item</li></Link>
+				<Link to="#"><li>Menu Item</li></Link>
 			</ul>
 			<ul className="col-md-3">
-					<li className="footer-title">Can I Have Yo Number?</li>
-					<Link to="#"><li>info@wethos.com</li></Link>
-					<li>400 W. 20th St.</li>
-					<li>New York, NY 10001</li>
-					<li>315.345.1983</li>
+					<li className="footer-title">Header</li>
+					<Link to="#"><li>Menu Item</li></Link>
+					<Link to="#"><li>Menu Item</li></Link>
 			</ul>
 			<div className="col-md-3 social">
-				<p className="tiny">Whatever You Do. Don't Follow Us</p>
+				<p>Social Media</p>
 				<div className="social-icons">
 					<Link to="#"><i className="fa fa-facebook-official" aria-hidden="true"></i></Link>
 					<Link to="#"><i className="fa fa-linkedin-square" aria-hidden="true"></i></Link>
