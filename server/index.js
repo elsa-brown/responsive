@@ -19,6 +19,6 @@ app.get('/*', (req, res, next) => {
 })
 
 // start server
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
 	console.log('server is listening on 8080')
 })
