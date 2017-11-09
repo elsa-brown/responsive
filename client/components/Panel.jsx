@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const Panel = () => {
+const Panel = (props) => {
 	return (
-		<div className="panel-outline">
+		<div className="panel-outline col-md-4">
 			<div className="panel">
-				<h5>Responsive design is an approach to web design that makes pages render well on a variety of devices and window, or screen, sizes.</h5>
+				<h5>{props.title}</h5>
 					<div className="panel-image-container">
 						<div className="globe" />
 					</div>

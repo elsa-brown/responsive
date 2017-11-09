@@ -103,6 +103,8 @@ a:hover {
 	font-size: 0.8rem;
 	font-weight: lighter;
 	color: $yellow;
+	text-align: center;
+	max-width: 148px;
 }
 
 .button:hover {
@@ -129,14 +131,6 @@ a:hover {
 	height: 50px;
 	display: flex;
 	flex-direction: column;
-
-/*	fa {
-		float: right;
-	}
-
-	fa:before {
-		visibility: hidden;
-	}*/
 
 	@media screen and (min-width: $sm) {
 		visibility: hidden;
@@ -247,21 +241,36 @@ a:hover {
 /* Hero styles */
 .hero {
 	background-color: $red;
-	padding: 20px;
+	padding: 30px;
   padding-top: 100px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
   border-bottom: 10px solid $yellow;
+
+  h1 {
+		font-size: 3rem;
+	}
+
+	h4 {
+		font-size: 0.85rem;
+		line-height: 1.4rem;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
 
 	@media screen and (min-width: $xs) {
 		height: 380px;
     padding: 80px;
     padding-top: 120px;
     border-bottom: 20px solid $yellow;
-	}
 
-	h4 {
-		margin-top: 30px;
-		margin-bottom: 20px;
+    h1 {
+    	font-size: 6rem
+    }
+
+    h4 {
+    	font-size: 0.9rem;
+    	line-height: 1.25rem;
+    }
 	}
 }
 
@@ -288,10 +297,16 @@ a:hover {
 
 .block-first-left-text {
 	margin: 0 auto;
-	padding: 70px;
+	padding: 30px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 
 	h6 {
 		margin-right: 50px;
+	}
+
+	@media screen and (min-width: $xs) {
+		padding: 70px;
 	}
 }
 
@@ -304,10 +319,10 @@ a:hover {
 	tr {
 		display: flex;
 		width: 100%;
-		height: 150px;
+		height: 175px;
 
 		@media screen and (min-width: $sm) {
-			height: 220px;
+			height: 230px;
 		}
 	}
 
@@ -358,39 +373,58 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	padding: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
+
+  @media screen and (min-width: $xs) {
+  	padding: 80px;
+  }
 }
 
 /* Panel styles */
 .panel-container {
 	display: flex;
 	justify-content: flex-start;
+	flex-direction: column;
 	margin-right: -15px;
 	padding-top: 35px;
+
+	@media screen and (min-width: $md) {
+		flex-direction: row;	
+	}
 }
 
 .panel-outline {
 	border: 2px solid $red;
 	color: $red;
-	height: 410px;
+	height: 350px;
  	margin-right: 15px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $md) {
+		margin-bottom: 0;	
+	}
 }
 
 .panel {
 	background-color: $red;
 	color: $yellow;
-	height: 340px;
+	height: 280px;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: center;
 
   h5 {
-  	margin-top: 0;
+  	font-size: 1.25rem;
+  	letter-spacing: 0.1rem;
+  	text-transform: uppercase;
+  	margin-top: 15px;
   	margin-bottom: 30px;
   }
 }
@@ -400,6 +434,7 @@ a:hover {
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-top: 20px;
 }
 
 .globe {
